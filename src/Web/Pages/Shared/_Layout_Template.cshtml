@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="/img/192x192.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css" />
-
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
     <%= htmlWebpackPlugin.tags.headTags %>
 </head>
 <body id="top">
@@ -21,7 +21,7 @@
         <script id="app" type="text/html">
             <div>
                 <app-bar :appName="appName" :menus="menus"></app-bar>
-                <main class="container-lg main">
+                <main class="container-lg">
                     @RenderBody()
                 </main>
             </div>
