@@ -1,0 +1,36 @@
+﻿@{
+    var appName = "DAVM";
+    var title = !string.IsNullOrWhiteSpace(ViewBag.Title) ? $"{ViewBag.Title} - " : "";
+    title += appName;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@title</title>
+    <link rel="apple-touch-icon" href="/img/192x192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css" />
+
+    <%= htmlWebpackPlugin.tags.headTags %>
+</head>
+<body id="top">
+    <div id="main">
+        <script id="app" type="text/html">
+            <div>
+                <app-bar :appName="appName" :menus="menus"></app-bar>
+                <main class="container-lg main">
+                    @RenderBody()
+                </main>
+            </div>
+        </script>
+        <app app-name="@appName"></app>
+    </div>
+
+    <%= htmlWebpackPlugin.tags.bodyTags %>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
