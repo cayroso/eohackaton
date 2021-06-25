@@ -1,5 +1,6 @@
 ﻿'use strict';
 
+import 'jquery/dist/jquery';
 import '../_Core/core';
 import './main.css';
 

@@ -19,22 +19,25 @@
 
     <%= htmlWebpackPlugin.tags.headTags %>
 
-    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css" />
+    @*<link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css" />*@
+
+    <link href="~/css/sb-admin-2.css" rel="stylesheet" />
+
 </head>
 <body id="top">
+
+
     <div id="main">
         <script id="app" type="text/html">
             <div>
-                <app-bar :appName="appName" :menus="menus"></app-bar>
-                <main class="container-lg my-2">
-                    @RenderBody()
-                </main>
+                @RenderBody()
             </div>
         </script>
         <app app-name="@appName"></app>
     </div>
 
     <%= htmlWebpackPlugin.tags.bodyTags %>
+    @*<script src="~/js/sb-admin-2.js"></script>*@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
