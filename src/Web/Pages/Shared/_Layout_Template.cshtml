@@ -14,14 +14,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css" />
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
     <%= htmlWebpackPlugin.tags.headTags %>
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css" />
 </head>
 <body id="top">
     <div id="main">
         <script id="app" type="text/html">
             <div>
                 <app-bar :appName="appName" :menus="menus"></app-bar>
-                <main class="container-lg">
+                <main class="container-lg my-2">
                     @RenderBody()
                 </main>
             </div>
